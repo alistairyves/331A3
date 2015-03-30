@@ -11,4 +11,6 @@ transition(monitoring,final,killswitch_triggered,_,_,_).
 %safe_shutdown
 transition(safe_shutdown,dormant,sleep,_,_,_).
 
+%init
+transition(init,idle,init_ok,_,_,_).
 
