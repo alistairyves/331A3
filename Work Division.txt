@@ -1,0 +1,2 @@
+Theory(State Machines and Specifications) : David
+Programming (prolog): Alistair
