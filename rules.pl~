@@ -20,5 +20,7 @@ graph_is_reflexive(Set).% succeeds if the entire EFSM is reflexive.
 get_guards(Ret). %succeeds by returning a set of all guards.
 get_events(Ret). %succeeds by returning a set of all events.
 get_actions(Ret).% succeeds by returning a set of all actions.
-get_only_guarded(Ret).% succeeds by returning state pairs that are associated by guards only.
-legal_events_of(State, L). %succeeds by returning all legal event-guard pairs
+7
+7. get only guarded(Ret) succeeds by returning state pairs that are associated by guards
+only.
+18. legal events of(State, L) succeeds by returning all legal event-guard pairs
