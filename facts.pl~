@@ -3,5 +3,3 @@
 
 transition(safe_shutdown,final,killswitch_engaged,_,_,_).
 transition(dormant,final,killswitch_engaged,_,_,_).
-transition(init,final,killswitch_engaged,_,_,_).
-
