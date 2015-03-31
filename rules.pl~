@@ -1,9 +1,16 @@
-is_loop(Event, Guard).
+%is_loop(Event, Guard).
 %succeeds by finding a loop edge. We assume that an edge
 %can be represented by a non-null event-guard pair.
-all_loops(Set).
-%succeeds by returning a set of all loop edges.
-is_edge(Event, Guard).% succeeds by finding an edge.
+is_loop(Event,Guard):-
+	transition(State,State,Event,Guard,_,_).
+%all_loops(Set).
+%succeeds by returning a set of all loop edges
+all_loops(Set):-
+	findall(loop(Event,Guard),is_loop,L),
+	list_to_set(L,Set).
+%is_edge(Event, Guard).% succeeds by finding an edge.
+is_edge(Event,Guard):-
+	transition(_,_,Event,Guard,_,_).
 size(Length).% succeeds by returning the size of the entire EFSM (given by the number
 %of its edges).
 is_link(Event, Guard).%succeeds by finding a link edge.
